@@ -1,0 +1,1079 @@
+<!DOCTYPE html>
+<html lang="en"><head> <meta name="google-site-verification" content="WiKLc1BHxd2b3jIRdyIVrSRqL8dOPBv8G5aPdhdcN8g" />
+    
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Print on Demand Roadmap - Launch Your POD Business</title>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        
+        :root {
+            --midnight-blue: #0f172a;
+            --deep-blue: #1e293b;
+            --cyan: #06b6d4;
+            --light-blue: #0ea5e9;
+            --light-gray: #cbd5e1;
+            --medium-gray: #94a3b8;
+            --dark-gray: #334155;
+            --card-bg: rgba(15, 23, 42, 0.9);
+        }
+        
+        body {
+            font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+            background: linear-gradient(135deg, var(--midnight-blue) 0%, #000 100%);
+            color: white;
+            min-height: 100vh;
+            line-height: 1.6;
+            overflow-x: hidden;
+        }
+        
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 2rem;
+        }
+        
+        /* Header Styles */
+        header {
+            padding: 2rem 0;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            flex-wrap: wrap;
+        }
+        
+        .logo {
+            font-size: 1.8rem;
+            font-weight: 800;
+            background: linear-gradient(90deg, var(--cyan), var(--light-blue));
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            margin-right: 2rem;
+        }
+        
+        nav {
+            display: flex;
+            gap: 1.5rem;
+        }
+        
+        nav a {
+            color: var(--light-gray);
+            text-decoration: none;
+            font-weight: 500;
+            transition: all 0.3s ease;
+            padding: 0.5rem 0;
+            position:极 relative;
+        }
+        
+        nav a:hover {
+            color: white;
+        }
+        
+        nav a::after {
+            content: '';
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            width: 0;
+            height: 2px;
+            background: linear-gradient(90deg, var(--cyan), var(--light-blue));
+            transition: width 0.3s ease;
+        }
+        
+        nav a:hover::after {
+            width: 100%;
+        }
+        
+        /* Hero Section */
+        .hero {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 4rem;
+            padding: 3rem 0;
+            align-items: center;
+        }
+        
+        @media (max-width: 768px) {
+            .hero {
+                grid-template-columns: 1fr;
+                gap: 2rem;
+            }
+        }
+        
+        .hero-content h1 {
+            font-size: 3.5rem;
+            font-weight: 800;
+            line-height: 1.2;
+            margin-bottom: 1.5rem;
+        }
+        
+        .hero-content h1 .gradient-text {
+            background: linear-gradient(90deg, var(--cyan), var(--light-blue));
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+        }
+        
+        .hero-content p {
+            font-size: 1.25rem;
+            color: var(--light-gray);
+            margin-bottom: 2.5rem;
+            max-width: 90%;
+        }
+        
+        .cta-button {
+            display: inline-block;
+            background: linear-gradient(90deg, var(--cyan), var(--light-blue));
+            color: white;
+            font-weight: 600;
+            font-size: 1.1rem;
+            padding: 1rem 2.5rem;
+            border-radius: 50px;
+            text-decoration: none;
+            transition: all 0.3s ease;
+            box-shadow: 0 4px 15px rgba(6, 182, 212, 0.3);
+            margin-bottom: 2.5rem;
+            text-align: center;
+        }
+        
+        .cta-button:hover {
+            transform: translateY(-3px);
+            box-shadow: 0 6px 20px rgba(6, 182, 212, 0.5);
+        }
+        
+        .trusted-by {
+            display: flex;
+            align-items: center;
+            gap: 1rem;
+            flex-wrap: wrap;
+        }
+        
+        .avatars {
+            display: flex;
+        }
+        
+        .avatars img {
+            width: 40px;
+            height: 40px;
+            border-radius: 50%;
+            border: 2px solid var(--midnight-blue);
+            margin-left: -10px;
+            object-fit: cover;
+        }
+        
+        .avatars img:first-child {
+            margin-left: 0;
+        }
+        
+        .stars {
+            display: flex;
+            gap: 2px;
+            margin: 0 0.5rem;
+        }
+        
+        .stars i {
+            color: #fbbf24;
+            font-size: 16px;
+        }
+        
+        .trust-text {
+            font-size: 0.9rem;
+            color: var(--medium-gray);
+        }
+        
+        /* Feature Cards - Smaller, more rounded, no icons */
+        .hero-image {
+            position: relative;
+            height: 500px;
+            border-radius: 20px;
+            overflow: hidden;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            box-shadow: 0 20px 25px -5px rgba(0, 0, 0, 0.3), 0 10px 10px -5px rgba(0, 0, 0, 0.2);
+            background: url('https://blogger.googleusercontent.com/img/b/R29vZ极xl/AVvXsEja8WwiTH_6-jL5u0CzH-HTI0CfMvVywRRJijHdQ5X8upMi5rBVuEHmNZJMgvsIAZze41QjqHriq-nZuXlf_YMXVwaB3W8Tzs5Rr-RWqHQM4b3UvLCEY_00HrT1EEh42_UGO8-_dIuPhd7n9PFlomsekfKWx9Zj9s967pQUdXvMMFCzq9tuIWfhsoG7cyo/s593/Screenshot%202025-07-22%20174119.png') center/cover no-repeat;
+        }
+        
+        .feature-cards {
+            position: absolute;
+            right: -20px;
+            top: 50%;
+            transform: translateY(-50%);
+            display: flex;
+            flex-direction: column;
+            gap: 1.2rem;
+            width: 240px;
+        }
+        
+        @media (max-width: 768px) {
+            .feature-cards {
+                position: relative;
+                right: auto;
+                top: auto;
+                transform: none;
+                width: 100%;
+                margin-top: 2rem;
+            }
+        }
+        
+        .feature-card {
+            background: var(--card-bg);
+            backdrop-filter: blur(10px);
+            border-radius: 28px; /* More rounded corners */
+            padding: 1rem; /* Smaller padding */
+            transition: all 0.3s ease;
+            border: 1px solid rgba(255, 255, 255, 0.05);
+            box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.2);
+        }
+        
+        .feature-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 20px 25px -5px rgba(0, 0, 0, 0.3);
+        }
+        
+        .feature-card h3 {
+            font-size: 1.1rem;
+            margin-bottom: 0.5rem;
+            color: var(--cyan);
+        }
+        
+        .feature-card p {
+            color: var(--medium-gray);
+            font-size: 0.9rem;
+            line-height: 1.5;
+        }
+        
+        /* Benefits Section */
+        .benefits {
+            display: flex;
+            justify-content: center;
+            gap: 3rem;
+            padding: 4rem 0;
+            flex-wrap: wrap;
+        }
+        
+        .benefit {
+            display: flex;
+            align-items: center;
+            gap: 0.75rem;
+            background: rgba(30, 41, 59, 0.5);
+            padding: 0.75rem 1.5rem;
+            border-radius: 50px;
+        }
+        
+        .benefit .icon {
+            width: 24px;
+            height: 24px;
+        }
+        
+        /* Pricing */
+        .pricing {
+            background: rgba(15, 23, 42, 0.5);
+            border-radius: 20px;
+            padding: 3rem;
+            margin: 4rem 0;
+            text-align: center;
+            border: 1px solid rgba(255, 255, 255, 0.05);
+        }
+        
+        .pricing h2 {
+            font-size: 2.5rem;
+            margin-bottom: 1rem;
+        }
+        
+        .pricing p {
+            color: var(--medium-gray);
+            max-width: 600px;
+            margin: 0 auto 2.5rem;
+            font-size: 1.1rem;
+        }
+        
+        .pricing-options {
+            display: flex;
+            justify-content: center;
+            gap: 2rem;
+            flex-wrap: wrap;
+        }
+        
+        .pricing-card {
+            background: rgba(30, 41, 59, 0.7);
+            border-radius: 16px;
+            padding: 2.5rem;
+            flex: 1;
+            min-width: 280px;
+            max-width: 350px;
+            transition: all 0.3s ease;
+            border: 1px solid rgba(6, 182, 212, 0.3);
+        }
+        
+        .pricing-card:hover {
+            transform: translateY(-5px);
+            border-color: var(--cyan);
+            box-shadow: 0 10px 25px -5px rgba(6, 182, 212, 0.2);
+        }
+        
+        .pricing-card h3 {
+            font-size: 1.5rem;
+            margin-bottom: 1rem;
+        }
+        
+        .price {
+            font-size: 2.5rem;
+            font-weight: 700;
+            margin-bottom: 1.5rem;
+            background: linear-gradient(90deg, var(--cyan), var(--light-blue));
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+        }
+        
+        .features-list {
+            list-style: none;
+            text-align: left;
+            margin-bottom: 2rem;
+            padding-left: 0;
+        }
+        
+        .features-list li {
+            padding: 0.5rem 0;
+            display: flex;
+            align-items: center;
+            gap: 0.5rem;
+        }
+        
+        .features-list li:before {
+            content: "✓";
+            color: var(--cyan);
+            font-weight: bold;
+        }
+        
+        /* FAQ Section */
+        .faq {
+            margin: 5rem 0;
+        }
+        
+        .faq h2 {
+            text-align: center;
+            font-size: 2.5rem;
+            margin-bottom: 3rem;
+        }
+        
+        .accordion {
+            max-width: 800px;
+            margin: 0 auto;
+        }
+        
+        .accordion-item {
+            margin-bottom: 1.5rem;
+            border-radius: 12px;
+            overflow: hidden;
+            background: rgba(30, 41, 59, 0.7);
+            border: 1px solid rgba(255, 255, 255, 0.1);
+        }
+        
+        .accordion-header {
+            padding: 1.5rem;
+            font-weight: 600;
+            cursor: pointer;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            transition: all 0.3s ease;
+        }
+        
+        .accordion-header:hover {
+            background: rgba(255, 255, 255, 0.05);
+        }
+        
+        .accordion-header::after {
+            content: '+';
+            font-size: 1.5rem;
+            transition: transform 0.3s ease;
+        }
+        
+        .accordion-header.active::after {
+            content: '−';
+        }
+        
+        .accordion-content {
+            max-height: 0;
+            overflow: hidden;
+            transition: max-height 0.3s ease;
+            padding: 0 1.5rem;
+            color: var(--light-gray);
+            background: rgba(15, 23, 42, 0.5);
+        }
+        
+        .accordion-content p {
+            padding: 1.5rem 0;
+            line-height: 1.7;
+        }
+        
+        /* Testimonials */
+        .testimonials {
+            padding: 4rem 0;
+        }
+        
+        .testimonials h2 {
+            text-align: center;
+            font-size: 2.5rem;
+            margin-bottom: 3rem;
+            font-weight: 700;
+        }
+        
+        .marquee-container {
+            overflow: hidden;
+            position: relative;
+            padding: 1rem 0;
+        }
+        
+        .marquee {
+            display: flex;
+            animation: marquee 30s linear infinite;
+        }
+        
+        @keyframes marquee {
+            0% { transform: translateX(0); }
+            100% { transform: translateX(-50%); }
+        }
+        
+        .testimonial-card {
+            background: rgba(15, 23, 42, 0.8);
+            border-radius: 16px;
+            padding: 2rem;
+            min-width: 350px;
+            margin: 0 1rem;
+            transition: all 0.3s ease;
+            border: 1px solid rgba(255, 255, 255, 0.05);
+        }
+        
+        .testimonial-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 10px 25px -5px rgba(0, 0, 0, 0.3);
+        }
+        
+        .testimonial-header {
+            display: flex;
+            align-items: center;
+            margin-bottom: 1.5rem;
+        }
+        
+        .testimonial-avatar {
+            width: 60px;
+            height: 60px;
+            border-radius: 50%;
+            margin-right: 1rem;
+            object-fit: cover;
+            border: 2px solid var(--light-blue);
+        }
+        
+        .testimonial-name {
+            font-weight: 600;
+            font-size: 1.1rem;
+        }
+        
+        .testimonial-text {
+            font-style: italic;
+            color: var(--light-gray);
+            line-height: 1.7;
+        }
+        
+        .stars-large {
+            display: flex;
+            gap: 2px;
+            margin-top: 0.5rem;
+        }
+        
+        .stars-large i {
+            color: #fbbf24;
+            font-size: 18px;
+        }
+        
+        /* Footer */
+        footer {
+            text-align: center;
+            padding: 3rem 0;
+            color: var(--medium-gray);
+            font-size: 0.9rem;
+            border-top: 1px solid rgba(255, 255, 255, 0.05);
+            margin-top: 2rem;
+        }
+        
+        .footer-links {
+            display: flex;
+            justify-content: center;
+            gap: 1.5rem;
+            margin-bottom: 1rem;
+            flex-wrap: wrap;
+        }
+        
+        .footer-links a {
+            color: var(--light-gray);
+            text-decoration: none;
+            transition: color 0.3s ease;
+        }
+        
+        .footer-links a:hover {
+            color: var(--cyan);
+        }
+
+        /* Floating Pricing Button - Optimized */
+        .floating-button {
+            position: fixed;
+            bottom: 30px;
+            right: 30px;
+            background: linear-gradient(90deg, var(--cyan), var(--light-blue));
+            color: white;
+            padding: 14px 28px;
+            border-radius: 50px;
+            text-decoration: none;
+            z-index: 1000;
+            box-shadow: 0 8px 25px rgba(6, 182, 212, 0.4);
+            font-weight: 600;
+            display: flex;
+            align-items: center;
+            gap: 10px;
+            transition: all 0.3s ease;
+            transform: scale(0.98);
+            opacity: 0.95;
+        }
+        
+        .floating-button:hover {
+            transform: scale(1.05) translateY(-3px);
+            box-shadow: 0 10px 30px rgba(6, 182, 212, 0.6);
+            opacity: 1;
+        }
+
+        .floating-button i {
+            font-size: 1.3rem;
+        }
+
+        /* Scroll progress indicator */
+        .scroll-progress {
+            position: fixed;
+            top: 0;
+            left: 0;
+            height: 4px;
+            background: linear-gradient(90deg, var(--cyan), var(--light-blue));
+            z-index: 1001;
+        }
+
+        /* Jump to Pricing */
+        .jump-to-pricing {
+            text-align: center;
+            margin: 2rem 0;
+        }
+        
+        .jump-button {
+            display: inline-block;
+            background: transparent;
+            color: var(--light-blue);
+            border: 2px solid var(--light-blue);
+            border-radius: 50px;
+            padding: 1rem 2rem;
+            font-weight: 600;
+            text-decoration: none;
+            transition: all 0.3s ease;
+        }
+        
+        .jump-button:hover {
+            background: rgba(14, 165, 233, 0.1);
+            transform: translateY(-3px);
+        }
+
+        /* Responsive Adjustments */
+        @media (max-width: 768px) {
+            .hero-content h1 {
+                font-size: 2.5rem;
+            }
+            
+            .hero-content p {
+                font-size: 1.1rem;
+            }
+            
+            .testimonial-card {
+                min-width: 300px;
+            }
+            
+            .pricing {
+                padding: 2rem 1rem;
+            }
+            
+            header {
+                flex-direction: column;
+                align-items: flex-start;
+            }
+            
+            nav {
+                margin-top: 1rem;
+                flex-wrap: wrap;
+            }
+            
+            .hero-image {
+                height: 400px;
+            }
+            
+            .floating-button {
+                bottom: 20px;
+                right: 20px;
+                padding: 12px 22px;
+                font-size: 0.95rem;
+            }
+        }
+    </style>
+<meta property="og:type" content="website"><meta property="og:image" content="https://neocities.org/site_screenshots/41/52/gopathtomillions/index.html.jpg"><meta property="og:title" content="Print on Demand Roadmap - Launch Your POD Business"></head>
+<body>
+    <div class="scroll-progress" id="scrollProgress"></div>
+    
+    <div class="container">
+        <!-- Header -->
+        <header>
+            <div class="logo">POD Roadmap</div>
+            <nav>
+                <a href="https://www.gopathtomillions.com">Home</a>
+                <a href="https://www.gopathtomillions.com/p/about-pathtomillions.html">About</a>
+                <a href="https://www.gopathtomillions.com/p/contact.html">Contact</a>
+            </nav>
+        </header>
+        
+        <!-- Hero Section -->
+        <section class="hero">
+            <div class="hero-content">
+                <h1>Your Ultimate <span class="gradient-text">Print on Demand</span> Success Blueprint</h1>
+                <p>Discover the step-by-step system thousands of successful POD entrepreneurs used to build profitable businesses without guesswork or expensive mistakes.</p>
+                <a href="https://pathtomillion.gumroad.com/l/dnktvd?_gl=1*1emwumh*_ga*MzYxNDYzNjkxLjE3Mzg7MTEzODg.*_ga_6LJN6D94N6*czE3NTMyMjA5NDAkbzM0MSRnMSR0MTc1MzIyMzQ9OCRqNDQkbDAkaDA" class="cta-button">Unlock Your POD Success Roadmap in Minutes</a>
+                
+                <div class="trusted-by">
+                    <div class="avatars">
+                        <img src="https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEjrk39K4bxQT3zVUFIM4HVHINwa0JrlugeRFqv0BD2fEeu1STlhW_2pX9JGZvY7Gu_YX-zyaGkTpwG6diMw9-XUwBJcHQ-0LoaVl91MfxYZ3mAslM0Ha4GOUl2EYdTmNH1MX2q极yBZmfwEJFyT0x8AF极hUrDWdtu9O21Xw-Y1F9mVjkR5hXsMhdhClsxW23E/s239/Screenshot%202025-07-22%20153838.png" alt="User">
+                        <img src="https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEhWif0nrlRY1NfYBOCR5DScYZpQYzeevAoGulv4EhmpJrj4cMe2i9Sz9qXTdjT7s_YLe-R_kCLDTjwfWqBMcCJsDgQ21cD7CDR2_9QGsHsrgC6Gs4hHFEvthh705JNLigZMtpoQNKa50PpL9a2g00hNDOBIeuTJDmCU7L4IMEwMWXb4yd1x9OgS1Q0Xubs/s246/Screenshot%202025-07-22%20153825.png" alt="User">
+                        <img src="https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEihKLGC-XE5jRhsb_uf0Ugublv-04eH16Htanf_j2U2YTGRNiQH1an9TKA_v6Lk2NNMpKlR7bgYkmWJNQ_GIv4uSIEUt-Qeen1uoYnBWgbbK5IMN0q88n238sIA7KQs1qz6eBa5llchJVRBHmMjdNjP6Dk879Mv1zzDWV-v3qxLn5QRp4PWGZMuY8U0ajU/s242/Screenshot%202025-07-22%20153813.png" alt="User">
+                        <img src="https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEgPxL-7FyQjBWwMTe_rqMsEcb8a6sT7H8VrMk7T8OcO3thDT1OJCMxGACDWZf_2az5WBi34I50MpYXDFEkaWWqpb0SlOI-T9z9iqXTbot1jPFKmKRVs5qWwXMREsXdEdKG-_wJIwfElpW9BcVokjUnJ4NULDTfx-tINl8e-1rR_DHSrxtfFiS4VZXAO9WA/s312/Screenshot%202025-07-22%20153853.png" alt="User">
+                    </div>
+                    <div class="stars">
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star-half-alt"></i>
+                    </div>
+                    <div class="trust-text">Trusted by 1,000+ print on demand stores</div>
+                </div>
+            </div>
+            
+            <div class="hero-image">
+                <div class="feature-cards">
+                    <div class="feature-card">
+                        <h3>Niche Research Tool</h3>
+                        <p>Find your Best Niche based on your passion and interests</p>
+                    </div>
+                    
+                    <div class="feature-card">
+                        <h3>Profit and Break-Even Calculator</h3>
+                        <p>Calculate your products ideal price and estimated Profit</p>
+                    </div>
+                    
+                    <div class="feature-card">
+                        <h3>Design Alignment Grid Overlay</h3>
+                        <p>Grid overlay helps precise alignment within printable safe zones</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+        
+        <!-- Benefits -->
+        <section class="benefits">
+            <div class="benefit">
+                <svg class="icon" viewBox="0 0 24 24" fill="none" stroke="#06b6d4" stroke-width="2">
+                    <path d="M12 15v2m-6 4h12a2 2 0 002-2v-6a2 2 0 00-2-2H6a2 2 0 00-2 2v6a2 2 0 002 2zm10-10V7a4 4 0 00-8 0v4h8z"></path>
+                </svg>
+                <span>Beginner Friendly</span>
+            </div>
+            
+            <div class="benefit">
+                <svg class="icon" viewBox="0 0 24 24" fill="none" stroke="#06b6d4" stroke-width="2">
+                    <path d="M4 4v5h.582m15.356 2A8.001 8.001 0 004.582 9m0 0H9m11 11v-5h-.581m0 0a8.003 8.003 0 01-15.357-2m15.357 2H15"></path>
+                </svg>
+                <span>Regular Updates</span>
+            </div>
+            
+            <div class="benefit">
+                <svg class="icon" viewBox="0 0 24 24" fill="none" stroke="#06b6d4" stroke-width="2">
+                    <path stroke-linecap="round" stroke-linejoin="round" d="M5 3v4M3 5h4M6 17v4m-2-2h4m5-16l2.286 6.857L21 12l-5.714 2.143L13 21l-2.286-6.857L5 12l5.714-2.143L13 3z" /></path>
+                </svg>
+                <span>Lifetime Usage</span>
+            </div>
+        </section>
+        
+        <!-- TESTIMONIALS MOVED ABOVE PRICING -->
+        <section class="testimonials">
+            <h2>What Our Users Say</h2>
+            
+            <div class="marquee-container">
+                <div class="marquee">
+                    <!-- Testimonial 1 -->
+                    <div class="testimonial-card">
+                        <div class="testimonial-header">
+                            <img src="https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEjG6a2-BGJgbDMC4odWBTJ99ksKmBqMDExz7w_vMWQeuHb1oFLLmxX9l6M_RnED9jp19oThzxHeKLVlrB72ICFolc6bnH1tiCWkT5jbSYUg5A5LmKvOvkHlsQBBEFM_tRjClBJNI_pVgPulL3gGpiAvEVBQnweF0ecwG_hVG3Vz7AfO2uW6tXQ2VC1qCxI/s351/Screenshot%202025-07-22%20153904.png" alt="Victor Nguyen" class="testimonial-avatar">
+                            <div>
+                                <div class="testimonial-name">Victor Nguyen</div>
+                                <div class="stars-large">
+                                    <i class="fas fa-star"></i>
+                                    <i class="fas fa-star"></i>
+                                    <i class="fas fa-star"></i>
+                                    <i class="fas fa-star"></i>
+                                    <i class="fas fa-star-half-alt"></i>
+                                </div>
+                            </div>
+                        </div>
+                        <p class="testimonial-text">"I would never have started a POD Store if not for this Roadmap. The step-by-step guidance gave me the confidence to take action immediately."</p>
+                    </div>
+                    
+                    <!-- Testimonial 2 - FIXED ALEXANDRA HAYES IMAGE -->
+                    <div class="testimonial-card">
+                        <div class="testimonial-header">
+                            <img src="https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEjdcGLIVsF7zMzPLW_pX0a_pV9SlsmfzwjMcj462RQxVupX25LqeCLaB--HO-x-AGOvRqPapNeUSvOcKsZoJ0kLkl518SWqsrL_mriDJsNCqguRfeREvHMYkfhME1aGSdDRi2hykDO2ITFnUqXZkiZtLFdlJ0s2UOpDx-g9doF3ZKE5JqkI2YL8MncMDDg/s462/Screenshot%202025-07-22%20160204.png" alt="Alexandra Hayes" class="testimonial-avatar">
+                            <div>
+                                <div class="testimonial-name">Alexandra Hayes</div>
+                                <div class="stars-large">
+                                    <i class="fas fa-star"></i>
+                                    <i class="fas fa-star"></i>
+                                    <i class="fas fa-star"></i>
+                                    <i class="fas fa-star"></i>
+                                    <i class="fas fa-star-half-alt"></i>
+                                </div>
+                            </div>
+                        </div>
+                        <p class="testimonial-text">"I'm amazed at how quickly I understood everything in the Roadmap. The niche research tool alone helped me find a profitable market in just 2 days!"</p>
+                    </div>
+                    
+                    <!-- Testimonial 3 -->
+                    <div class="testimonial-card">
+                        <div class="testimonial-header">
+                            <img src="https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEgPxL-7FyQjBWwMTe_rqMsEcb8a6sT7H8VrMk7T8OcO3thDT1OJCMxGACDWZf_2az5WBi34I50MpYXDFEkaWWqpb0SlOI-T9z9iqXTbot1jPFKmKRVs5qWwXMREsXdEdKG-_wJIwfElpW9BcVokjUnJ4NULDTfx-tINl8e-1rR_DHSrxtfFiS4VZXAO9WA/s312/Screenshot%202025-07-22%20153853.png" alt="Marcus Bennett" class="testimonial-avatar">
+                            <div>
+                                <div class="testimonial-name">Marcus Bennett</div>
+                                <div class="stars-large">
+                                    <i class="fas fa-star"></i>
+                                    <i class="fas fa-star"></i>
+                                    <i class="fas fa-star"></i>
+                                    <i class="fas fa-star"></i>
+                                    <i class="fas fa-star-half-alt"></i>
+                                </div>
+                            </div>
+                        </div>
+                        <p class="testimonial-text">"No other tool comes close to it. The profit calculator saved me from pricing mistakes that would have cost me hundreds in lost revenue."</p>
+                    </div>
+                    
+                    <!-- Testimonial 4 -->
+                    <div class="testimonial-card">
+                        <div class="testimonial-header">
+                            <img src="https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEihKLGC-XE5jRhsb_uf0Ugublv-04eH16Htanf_j2U2YTGRNiQH1an9TKA_v6Lk2NNMpKlR7bgYkmWJNQ_GIv4uSIEUt-Qeen1uoYnBWgbbK5IMN0q88n238sIA7KQs1qz6eBa5llchJVRBHmMjdNjP6Dk879Mv1zzDWV-v3qxLn5QRp4PWGZMuY8U0ajU/s242/Screenshot%202025-07-22%20153813.png" alt="Elijah Ford" class="testimonial-avatar">
+                            <div>
+                                <div class="testimonial-name">Elijah Ford</div>
+                                <div class="stars-large">
+                                    <i class="fas fa-star"></i>
+                                    <i class="fas fa-star"></i>
+                                    <i class="fas fa-star"></i>
+                                    <i class="fas fa-star"></i>
+                                    <i class="fas fa-star-half-alt"></i>
+                                </div>
+                            </div>
+                        </div>
+                        <p class="testimonial-text">"The Niche finder tool has been a game changer! I went from struggling to find ideas to having 3 profitable niches to pursue."</p>
+                    </div>
+                    
+                    <!-- Testimonial 5 -->
+                    <div class="testimonial-card">
+                        <div class="testimonial-header">
+                            <img src="https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEhWif0nrlRY1NfYBOCR5DScYZpQYzeevAoGulv4EhmpJrj4cMe2i9Sz9qXTdjT7s_YLe-R_kCLDTjwfWqBMcCJsDgQ21cD7CDR2_9QGsHsrgC6Gs4hHFEvthh705JNLigZMtpoQNKa50PpL9a2g00hNDOBIeuTJDmCU7L4IMEwMWXb4yd1x9OgS1Q0Xubs/s246/Screenshot%202025-07-22%20153825.png" alt="Daniel Morales" class="testimonial-avatar">
+                            <div>
+                                <div class="testimonial-name">Daniel Morales</div>
+                                <div class="stars-large">
+                                    <i class="fas fa-star"></i>
+                                    <i class="fas fa-star"></i>
+                                    <i class="fas fa-star"></i>
+                                    <i class="fas fa-star"></i>
+                                    <i class="fas fa-star-half-alt"></i>
+                                </div>
+                            </div>
+                        </div>
+                        <p class="testimonial-text">"These tools save me time by doing the hardest part… getting started. I went from overwhelmed to making my first sale in 3 weeks!"</p>
+                    </div>
+                
+                    <!-- Testimonial 1 -->
+                    <div class="testimonial-card">
+                        <div class="testimonial-header">
+                            <img src="https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEjG6a2-BGJgbDMC4odWBTJ99ksKmBqMDExz7w_vMWQeuHb1oFLLmxX9l6M_RnED9jp19oThzxHeKLVlrB72ICFolc6bnH1tiCWkT5jbSYUg5A5LmKvOvkHlsQBBEFM_tRjClBJNI_pVgPulL3gGpiAvEVBQnweF0ecwG_hVG3Vz7AfO2uW6tXQ2VC1qCxI/s351/Screenshot%202025-07-22%20153904.png" alt="Victor Nguyen" class="testimonial-avatar" />
+                            <div>
+                                <div class="testimonial-name">Victor Nguyen</div>
+                                <div class="stars-large">
+                                    <i class="fas fa-star"></i>
+                                    <i class="fas fa-star"></i>
+                                    <i class="fas fa-star"></i>
+                                    <i class="fas fa-star"></i>
+                                    <i class="fas fa-star-half-alt"></i>
+                                </div>
+                            </div>
+                        </div>
+                        <p class="testimonial-text">&quot;I would never have started a POD Store if not for this Roadmap. The step-by-step guidance gave me the confidence to take action immediately.&quot;</p>
+                    </div>
+                    
+                    <!-- Testimonial 2 - FIXED ALEXANDRA HAYES IMAGE -->
+                    <div class="testimonial-card">
+                        <div class="testimonial-header">
+                            <img src="https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEjdcGLIVsF7zMzPLW_pX0a_pV9SlsmfzwjMcj462RQxVupX25LqeCLaB--HO-x-AGOvRqPapNeUSvOcKsZoJ0kLkl518SWqsrL_mriDJsNCqguRfeREvHMYkfhME1aGSdDRi2hykDO2ITFnUqXZkiZtLFdlJ0s2UOpDx-g9doF3ZKE5JqkI2YL8MncMDDg/s462/Screenshot%202025-07-22%20160204.png" alt="Alexandra Hayes" class="testimonial-avatar" />
+                            <div>
+                                <div class="testimonial-name">Alexandra Hayes</div>
+                                <div class="stars-large">
+                                    <i class="fas fa-star"></i>
+                                    <i class="fas fa-star"></i>
+                                    <i class="fas fa-star"></i>
+                                    <i class="fas fa-star"></i>
+                                    <i class="fas fa-star-half-alt"></i>
+                                </div>
+                            </div>
+                        </div>
+                        <p class="testimonial-text">&quot;I&#39;m amazed at how quickly I understood everything in the Roadmap. The niche research tool alone helped me find a profitable market in just 2 days!&quot;</p>
+                    </div>
+                    
+                    <!-- Testimonial 3 -->
+                    <div class="testimonial-card">
+                        <div class="testimonial-header">
+                            <img src="https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEgPxL-7FyQjBWwMTe_rqMsEcb8a6sT7H8VrMk7T8OcO3thDT1OJCMxGACDWZf_2az5WBi34I50MpYXDFEkaWWqpb0SlOI-T9z9iqXTbot1jPFKmKRVs5qWwXMREsXdEdKG-_wJIwfElpW9BcVokjUnJ4NULDTfx-tINl8e-1rR_DHSrxtfFiS4VZXAO9WA/s312/Screenshot%202025-07-22%20153853.png" alt="Marcus Bennett" class="testimonial-avatar" />
+                            <div>
+                                <div class="testimonial-name">Marcus Bennett</div>
+                                <div class="stars-large">
+                                    <i class="fas fa-star"></i>
+                                    <i class="fas fa-star"></i>
+                                    <i class="fas fa-star"></i>
+                                    <i class="fas fa-star"></i>
+                                    <i class="fas fa-star-half-alt"></i>
+                                </div>
+                            </div>
+                        </div>
+                        <p class="testimonial-text">&quot;No other tool comes close to it. The profit calculator saved me from pricing mistakes that would have cost me hundreds in lost revenue.&quot;</p>
+                    </div>
+                    
+                    <!-- Testimonial 4 -->
+                    <div class="testimonial-card">
+                        <div class="testimonial-header">
+                            <img src="https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEihKLGC-XE5jRhsb_uf0Ugublv-04eH16Htanf_j2U2YTGRNiQH1an9TKA_v6Lk2NNMpKlR7bgYkmWJNQ_GIv4uSIEUt-Qeen1uoYnBWgbbK5IMN0q88n238sIA7KQs1qz6eBa5llchJVRBHmMjdNjP6Dk879Mv1zzDWV-v3qxLn5QRp4PWGZMuY8U0ajU/s242/Screenshot%202025-07-22%20153813.png" alt="Elijah Ford" class="testimonial-avatar" />
+                            <div>
+                                <div class="testimonial-name">Elijah Ford</div>
+                                <div class="stars-large">
+                                    <i class="fas fa-star"></i>
+                                    <i class="fas fa-star"></i>
+                                    <i class="fas fa-star"></i>
+                                    <i class="fas fa-star"></i>
+                                    <i class="fas fa-star-half-alt"></i>
+                                </div>
+                            </div>
+                        </div>
+                        <p class="testimonial-text">&quot;The Niche finder tool has been a game changer! I went from struggling to find ideas to having 3 profitable niches to pursue.&quot;</p>
+                    </div>
+                    
+                    <!-- Testimonial 5 -->
+                    <div class="testimonial-card">
+                        <div class="testimonial-header">
+                            <img src="https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEhWif0nrlRY1NfYBOCR5DScYZpQYzeevAoGulv4EhmpJrj4cMe2i9Sz9qXTdjT7s_YLe-R_kCLDTjwfWqBMcCJsDgQ21cD7CDR2_9QGsHsrgC6Gs4hHFEvthh705JNLigZMtpoQNKa50PpL9a2g00hNDOBIeuTJDmCU7L4IMEwMWXb4yd1x9OgS1Q0Xubs/s246/Screenshot%202025-07-22%20153825.png" alt="Daniel Morales" class="testimonial-avatar" />
+                            <div>
+                                <div class="testimonial-name">Daniel Morales</div>
+                                <div class="stars-large">
+                                    <i class="fas fa-star"></i>
+                                    <i class="fas fa-star"></i>
+                                    <i class="fas fa-star"></i>
+                                    <i class="fas fa-star"></i>
+                                    <i class="fas fa-star-half-alt"></i>
+                                </div>
+                            </div>
+                        </div>
+                        <p class="testimonial-text">&quot;These tools save me time by doing the hardest part… getting started. I went from overwhelmed to making my first sale in 3 weeks!&quot;</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+        
+        <!-- Pricing -->
+        <section class="pricing" id="pricing">
+            <h2>Simple, Transparent Pricing</h2>
+            <p>Choose the perfect package for your POD journey with no hidden fees or recurring charges</p>
+            
+            <div class="pricing-options">
+                <div class="pricing-card">
+                    <h3>Roadmap Standalone</h3>
+                    <div class="price">$37.99</div>
+                    <ul class="features-list">
+                        <li>Complete POD Roadmap Guide</li>
+                        <li>Step-by-Step Implementation</li>
+                        <li>Resource Library</li>
+                        <li>Lifetime Updates</li>
+                    </ul>
+                    <a href="https://pathtomillion.gumroad.com/l/dnktvd?_gl=1*1emwumh*_ga*MzYxNDYzNjkxLjE3Mzg7MTEzODg.*_ga_6LJN6D94N6*czE3NTMyMjA5NDAkbzM0MSRnMSR0MTc1MzIyMzQ5OCRqNDQkbDAkaDA" class="cta-button">Get Started</a>
+                </div>
+                
+                <div class="pricing-card">
+                    <h3>Roadmap + 2 Tools</h3>
+                    <div class="price">$47.94</div>
+                    <ul class="features-list">
+                        <li>Complete POD Roadmap Guide</li>
+                        <li>Design Alignment Grid Overlay Tool</li>
+                        <li>Print-on-Demand Palette Designer</li>
+                        <li>Lifetime Updates</li>
+                    </ul>
+                    <a href="https://pathtomillion.gumroad.com/l/fqbeqj?_gl=1*o5y2jb*_ga*MzYxNDYzNjkxLjE3Mzg7MTEzODg.*_ga_6LJN6D94N6*czE3NTMyMjA9NDAkbzM0MSRnMSR0MTc1MzIyMzQ5OCRqNDQkbDAkaDA" class="cta-button">Get Started</a>
+                </div>
+                
+                <div class="pricing-card">
+                    <h3>Roadmap + 5 Tools</h3>
+                    <div class="price">$57.59</div>
+                    <ul class="features-list">
+                        <li>Complete POD Roadmap Guide</li>
+                        <li>Design Alignment Grid Overlay Tool</li>
+                        <li>Print-on-Demand Palette Designer</li>
+                        <li>Profit and Break-Even Calculator Tool</li>
+                        <li>T-Shirt Design Visualizer</li>
+                        <li>Niche Research Tool</li>
+                        <li>Lifetime Updates</li>
+                    </ul>
+                    <a href="https://pathtomillion.gumroad.com/l/ssitv?_gl=1*h7ftad*_ga*MzYxNDYzNjkxLjE3Mzg7MTEzODg.*_ga_6LJN6D94N6*czE3NTMyMjA5NDAkbzM0MSRnMSR0MTc1MzIyMzQ5OCRqNDQkbDAkaDA" class="cta-button">Get Started</a>
+                </div>
+            </div>
+        </section>
+        
+        <!-- FAQ Section - FIXED THE CLASS ISSUE -->
+        <section class="faq">
+            <h2>Frequently Asked Questions</h2>
+            <div class="accordion">
+                <!-- FAQ Item 1 -->
+                <div class="accordion-item">
+                    <div class="accordion-header">What’s included in the Print on Demand Guide + 2 Tools bundle?</div>
+                    <div class="accordion-content">
+                        <p>You’ll receive our step‑by‑step Print on Demand Guide plus two premium design utilities the Design Alignment Grid Overlay Tool for pixel perfect placements and the Print‑on‑Demand Palette Designer to craft cohesive color schemes. Together they streamline your workflow, reduce errors, and boost print quality everything you need to launch profitable POD products fast.</p>
+                    </div>
+                </div>
+                
+                <!-- FAQ Item 2 -->
+                <div class="accordion-item">
+                    <div class="accordion-header">How does the Design Alignment Grid Overlay Tool improve my product mockups?</div>
+                    <div class="accordion-content">
+                        <p>The Design Alignment Grid Overlay Tool superimposes a customizable grid on any mockup ensuring your artwork sits perfectly on t‑shirts, mugs, or phone cases. By snapping to gridlines you eliminate off‑center prints and wasted samples. This precision boosts customer satisfaction cuts revision cycles and elevates your brand’s professional presentation every time.</p>
+                    </div>
+                </div>
+                
+                <!-- FAQ Item 3 -->
+                <div class="accordion-item">
+                    <div class="accordion-header">What can I achieve with the Print‑on‑Demand Palette Designer?</div>
+                    <div class="accordion-content">
+                        <p>Our Print‑on‑Demand Palette Designer lets you build, save, and export on‑brand color palettes optimized for fabric and ink printing. Preview harmonious combinations, fine‑tune contrast ratios, and download swatch files ready for major POD platforms. Consistent color usage across products strengthens brand identity, accelerates design decisions, and reduces costly reprints.</p>
+                    </div>
+                </div>
+                
+                <!-- FAQ Item 4 -->
+                <div class="accordion-item">
+                    <div class="accordion-header">Why should I upgrade to the Guide + 5 Tools Roadmap bundle?</div>
+                    <div class="accordion-content">
+                        <p>The Guide + 5 Tools Roadmap gives you every essential utility to dominate POD: Design Alignment Grid Overlay, Palette Designer, Profit & Break‑Even Calculator, T‑Shirt Design Visualizer, and Mockup Preview Generator. This all‑in‑one suite streamlines design, pricing analysis, and product visualization empowering you to launch, price, and market your custom merchandise with zero guesswork.</p>
+                    </div>
+                </div>
+                
+                <!-- FAQ Item 5 - FIXED THE CLASS ISSUE -->
+                <div class="accordion-item">
+                    <div class="accordion-header">How will the Profit & Break‑Even Calculator Tool optimize my pricing strategy?</div>
+                    <div class="accordion-content">
+                        <p>Input your base costs, printing fees, shipping rates, and desired profit margin into the Profit & Break‑Even Calculator. It instantly computes minimum viable prices and break‑even units. With clear cost breakdowns and scenario projections you’ll price products competitively, maximize margins, and avoid undercharging-essential for scaling a sustainable Print on Demand business.</p>
+                    </div>
+                </div>
+                
+                <!-- FAQ Item 6 -->
+                <div class="accordion-item">
+                    <div class="accordion-header">What makes the T‑Shirt Design Visualizer so powerful?</div>
+                    <div class="accordion-content">
+                        <p>The T‑Shirt Design Visualizer generates hyper‑realistic mockups on various shirt styles and models. Upload your artwork, select garment types, and instantly see how prints drape and align in real life. These photo‑quality previews improve your product pages, reduce return rates, and help customers visualize wearing your custom designs before they buy.</p>
+                    </div>
+                </div>
+                
+                <!-- FAQ Item 7 -->
+                <div class="accordion-item">
+                    <div class="accordion-header">Is the Design Alignment Grid Overlay Tool suitable for beginners?</div>
+                    <div class="accordion-content">
+                        <p>Absolutely. The Design Alignment Grid Overlay Tool features an intuitive interface with adjustable grid spacing, and one‑click toggles. No prior design experience is needed just upload your mockup, overlay the grid, and drag elements into position. Beginners quickly achieve professional‑grade layouts, while experts save hours on alignment and quality checks.</p>
+                    </div>
+                </div>
+                
+                <!-- FAQ Item 8 -->
+                <div class="accordion-item">
+                    <div class="accordion-header">Can the POD Palette Designer streamline my brand’s visual consistency?</div>
+                    <div class="accordion-content">
+                        <p>Yes. By centralizing your brand’s color swatches in the Print‑on‑Demand Palette Designer, you ensure every product uses the exact same hues. Export swatch files for seamless integration into Photoshop, Illustrator, or major POD platforms. Consistency across mockups, marketing assets, and finished goods builds trust, reinforces brand recall, and accelerates your design process.</p>
+                    </div>
+                </div>
+                
+                <!-- FAQ Item 9 -->
+                <div class="accordion-item">
+                    <div class="accordion-header">How fast can I implement these tools after purchase?</div>
+                    <div class="accordion-content">
+                        <p>Immediately Once you complete checkout, you’ll receive instant links Within minutes, you can use the Design Alignment Grid Overlay and Palette Designer plugins or access the web‑based tools. Everything is optimized for plug‑and‑play so you can start designing, pricing, and visualizing custom products today.</p>
+                    </div>
+                </div>
+                
+                <!-- FAQ Item 10 -->
+                <div class="accordion-item">
+                    <div class="accordion-header">What support and updates come with the Guide + Tools Roadmap?</div>
+                    <div class="accordion-content">
+                        <p>Your purchase includes one year of priority email support for troubleshooting plus free lifetime updates as we release new features. This ensures your Print on Demand Guide and tools stay current helping you stay ahead in a competitive market.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+        
+        <!-- Footer -->
+        <footer>
+            <div class="footer-links">
+                <a href="https://sites.google.com/view/print-on-demand-hub/privacy-policy?authuser=3">Privacy Policy</a>
+            </div>
+        </footer>
+    </div>
+    
+    <!-- Floating Button - Optimized Placement -->
+    <a href="#pricing" class="floating-button">
+        <i class="fas fa-tag"></i> See Pricing
+    </a>
+    
+    <script>
+        // Duplicate testimonials for seamless marquee
+        document.addEventListener('DOMContentLoaded', function() {
+            const marquee = document.querySelector('.marquee');
+            const testimonialSet = marquee.innerHTML;
+            marquee.innerHTML = testimonialSet + testimonialSet;
+            
+            // Accordion functionality
+            const accordionHeaders = document.querySelectorAll('.accordion-header');
+            
+            accordionHeaders.forEach(header => {
+                header.addEventListener('click', function() {
+                    this.classList.toggle('active');
+                    const content = this.nextElementSibling;
+                    
+                    if (content.style.maxHeight) {
+                        content.style.maxHeight = null;
+                    } else {
+                        content.style.maxHeight = content.scrollHeight + "px";
+                    }
+                });
+            });
+            
+            // Scroll progress indicator
+            window.onscroll = function() {
+                const winScroll = document.body.scrollTop || document.documentElement.scrollTop;
+                const height = document.documentElement.scrollHeight - document.documentElement.clientHeight;
+                const scrolled = (winScroll / height) * 100;
+                document.getElementById("scrollProgress").style.width = scrolled + "%";
+            };
+        });
+    </script>
+
+</body></html>
